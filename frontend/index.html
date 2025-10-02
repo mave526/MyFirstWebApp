@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,5 +32,86 @@
       molestias sed, assumenda repellat. Optio, enim! Nisi aspernatur suscipit
       obcaecati ad aliquid?
     </p>
+    <form action="">
+      <input type="text" placeholder="Type something..." required/>
+      <button type="submit">Submit</button>
+
+      <label for="email">Email Address:</label>
+      <input id="email" type="text" name="email">
+    </form>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FormData Test: name vs no-name</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    form { margin-bottom: 40px; }
+    .section { border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; }
+    .output { background: #f9f9f9; padding: 10px; font-family: monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>Form Submission Test</h1>
+
+  <div class="section">
+    <h2>✔️ Checkbox WITH name="agree"</h2>
+    <form id="formWithName">
+      <label>
+        <input type="checkbox" id="agreeWithName" name="agree" checked>
+        I agree (with name)
+      </label>
+      <br><br>
+      <button type="submit">Submit Form (With Name)</button>
+    </form>
+    <div id="outputWithName" class="output"></div>
+  </div>
+
+  <div class="section">
+    <h2>❌ Checkbox WITHOUT name</h2>
+    <form id="formNoName">
+      <label>
+        <input type="checkbox" id="agreeNoName" checked>
+        I agree (no name)
+      </label>
+      <br><br>
+      <button type="submit">Submit Form (No Name)</button>
+    </form>
+    <div id="outputNoName" class="output"></div>
+  </div>
+
+  <script>
+    // Form with name
+    const formWithName = document.getElementById('formWithName');
+    const outputWithName = document.getElementById('outputWithName');
+
+    formWithName.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(formWithName);
+      let result = '';
+      for (let [key, value] of formData.entries()) {
+        result += `${key}: ${value}\n`;
+      }
+      outputWithName.textContent = result || 'No data submitted.';
+    });
+
+    // Form without name
+    const formNoName = document.getElementById('formNoName');
+    const outputNoName = document.getElementById('outputNoName');
+
+    formNoName.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(formNoName);
+      let result = '';
+      for (let [key, value] of formData.entries()) {
+        result += `${key}: ${value}\n`;
+      }
+      outputNoName.textContent = result || 'No data submitted.';
+    });
+  </script>
+
+</body>
 </html>
