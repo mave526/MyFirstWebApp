@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Web App</title>
+    <style>
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        float: left;
+        margin-right: 20px;
+        /* height: auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/marvel_spiderman_1.jpg" alt="Spider Man Image" />
+    <h1>Welcome to My <em>FIRST</em> Web App</h1>
+    <p>
+      &COPY; Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      Voluptatum consequatur autem sunt molestias assumenda rerum nulla, ipsum
+      eius quaerat placeat eveniet consectetur doloremque nemo reprehenderit ad.
+      Iste nostrum sunt facilis necessitatibus laborum provident sit. Officia,
+      aut. Nostrum consequuntur alias ratione distinctio dolorum laboriosam
+      tempore facere velit ullam atque itaque minima obcaecati culpa, qui
+      tenetur illo asperiores id enim dolores similique cupiditate earum
+      deleniti. Eligendi quibusdam molestiae porro consequuntur numquam velit
+      dolor explicabo aliquid fugit neque odio tempore voluptates mollitia
+      tenetur perspiciatis et laudantium accusantium magnam, vero ullam iusto
+      molestias sed, assumenda repellat. Optio, enim! Nisi aspernatur suscipit
+      obcaecati ad aliquid?
+    </p>
+    <form action="">
+      <input type="text" placeholder="Type something..." required/>
+      <button type="submit">Submit</button>
+
+      <label for="email">Email Address:</label>
+      <input id="email" type="text" name="email">
+    </form>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FormData Test: name + value</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    form { margin-bottom: 40px; }
+    .section { 
+      border: 1px solid #ccc; 
+      padding: 20px; 
+      margin-bottom: 20px;
+      background-color: rgb(255,255,255);
+      background: linear-gradient(180deg, rgb(255, 0, 0), rgb(0, 0, 255)); 
+    }
+    .output { background: #f9f9f9; padding: 10px; font-family: monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>Form Submission Test (name + value)</h1>
+
+  <div class="section">
+    <h2>✔️ Checkbox WITH name + value</h2>
+    <form id="formWithNameValue">
+      <label>
+        <input type="checkbox" id="agreeWithNameValue" name="agree" value="yes" checked>
+        I agree (name + value="yes")
+      </label>
+      <br><br>
+      <button type="submit">Submit Form (With Name + Value)</button>
+    </form>
+    <div id="outputWithNameValue" class="output"></div>
+  </div>
+
+  <div class="section">
+    <h2>❌ Checkbox WITHOUT value (name only)</h2>
+    <form id="formWithNameNoValue">
+      <label>
+        <input type="checkbox" id="agreeWithNameOnly" name="agree" checked>
+        I agree (name only, no value)
+      </label>
+      <br><br>
+      <button type="submit">Submit Form (With Name, No Value)</button>
+    </form>
+    <div id="outputWithNameNoValue" class="output"></div>
+  </div>
+
+  <div class="section">
+    <h2>🚫 Checkbox WITHOUT name or value</h2>
+    <form id="formNoNameNoValue">
+      <label>
+        <input type="checkbox" id="agreeNothing" checked>
+        I agree (no name, no value)
+      </label>
+      <br><br>
+      <button type="submit">Submit Form (No Name, No Value)</button>
+    </form>
+    <div id="outputNoNameNoValue" class="output"></div>
+  </div>
+
+  <script>
+    function handleForm(formId, outputId) {
+      const form = document.getElementById(formId);
+      const output = document.getElementById(outputId);
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        let result = '';
+        for (let [key, value] of formData.entries()) {
+          result += `${key}: ${value}\n`;
+        }
+        output.textContent = result || 'No data submitted.';
+      });
+    }
+
+    handleForm('formWithNameValue', 'outputWithNameValue');
+    handleForm('formWithNameNoValue', 'outputWithNameNoValue');
+    handleForm('formNoNameNoValue', 'outputNoNameNoValue');
+  </script>
+
+</body>
+</html> 
+-->
